@@ -1,0 +1,43 @@
+.detailed-info-modal {
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detailed-info-modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+.detailed-info-modal::-webkit-scrollbar-track {
+  background: rgba(24, 24, 27, 0.5);
+}
+
+.detailed-info-modal::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 4px;
+}
+
+.detailed-info-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.6);
+}
+
+/* Smooth scrolling for content area */
+.detailed-info-modal > div:has(> section) {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .detailed-info-modal {
+    max-width: 100%;
+  }
+}
