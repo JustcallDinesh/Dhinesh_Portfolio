@@ -2,9 +2,10 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import dotenv from 'dotenv';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDhqQpbSZzDC5amq9HBlBo3v-2FnL5Rpsk",
+  apiKey: process.env.ApiKey,
   authDomain: "porfolio-0041.firebaseapp.com",
   projectId: "porfolio-0041",
   storageBucket: "porfolio-0041.firebasestorage.app",
