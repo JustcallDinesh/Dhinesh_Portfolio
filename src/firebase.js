@@ -2,18 +2,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import dotenv from 'dotenv';
 
 const firebaseConfig = {
-  apiKey: process.env.ApiKey,
-  authDomain: "porfolio-0041.firebaseapp.com",
-  projectId: "porfolio-0041",
-  storageBucket: "porfolio-0041.firebasestorage.app",
-  messagingSenderId: "367095414960",
-  appId: "1:367095414960:web:ff7a7c2fac821bcf50bb75",
-  measurementId: "G-MX10L97EP7"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
-
 // Init Firebase
 const app = initializeApp(firebaseConfig);
 
